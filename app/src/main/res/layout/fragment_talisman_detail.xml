@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".view.talismans.TalismanDetailFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mcv_talisman_detail_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="100dp"
+        app:cardCornerRadius="8dp"
+        app:strokeColor="@color/yellow"
+        app:strokeWidth="2dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/yellow">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_talisman_detail_name"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textSize="36sp"
+                android:background="@color/black"
+                android:textColor="@color/white"
+                android:paddingHorizontal="8dp"
+                tools:text="CRIMSON AMBER MEDALLION" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_talisman_detail"
+                android:layout_width="match_parent"
+                android:background="@color/black"
+                android:layout_height="300dp" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="start|center"
+                    android:text="@string/talisman_detail_effects"
+                    android:textSize="16sp"
+                    android:paddingStart="8dp"
+                    android:textColor="@color/white"
+                    tools:ignore="RtlSymmetry"
+                    android:background="#434343"
+                    android:layout_margin="0.5dp"
+                    android:elevation="2dp"/>
+
+                <TextView
+                    android:id="@+id/tv_talisman_detail_effect"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:gravity="start|center"
+                    tools:text="0.3"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:paddingStart="8dp"
+                    tools:ignore="RtlSymmetry"
+                    android:background="#434343"
+                    android:layout_margin="0.5dp"/>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|center"
+                android:text="@string/talisman_detail_description"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:paddingStart="8dp"
+                tools:ignore="RtlSymmetry"
+                android:background="#434343"/>
+
+            <TextView
+                android:id="@+id/tv_talisman_detail_description"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="start|center|top"
+                tools:text="Talisman description with info about location and how to obtain"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:textStyle="italic"
+                android:paddingStart="24dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="8dp"
+                tools:ignore="RtlSymmetry"
+                android:background="#434343"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <ProgressBar
+        android:id="@+id/pb_talisman_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

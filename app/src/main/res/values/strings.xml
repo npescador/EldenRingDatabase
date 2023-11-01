@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Elden Ring Database</string>
+
+    <!-- Bottom Navigation View -->
+    <string name="title_home">Home</string>
+    <string name="title_weapons">Weapons</string>
+    <string name="title_talismans">Talismans</string>
+    <string name="title_bosses">Bosses</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!-- Actions Strings -->
+    <string name="action_ok">Aceptar</string>
+    <string name="action_retry">Reintentar</string>
+    <string name="error">Error</string>
+    <string name="talisman_detail_description">Description</string>
+    <string name="talisman_detail_effects">Effects</string>
+</resources>

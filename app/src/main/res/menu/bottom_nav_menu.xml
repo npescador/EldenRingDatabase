@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_bosses"
+        android:icon="@drawable/ic_bosses"
+        android:title="@string/title_bosses" />
+
+    <item
+        android:id="@+id/navigation_talismans"
+        android:icon="@drawable/ic_talismans"
+        android:title="@string/title_talismans" />
+
+    <item
+        android:id="@+id/navigation_weapons"
+        android:icon="@drawable/ic_weapons"
+        android:title="@string/title_weapons" />
+
+</menu>

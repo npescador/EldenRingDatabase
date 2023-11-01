@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.nachopr.eldenringdatabase.view.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/navigation_bosses"
+        android:name="com.nachopr.eldenringdatabase.view.bosses.BossesFragment"
+        android:label="fragment_bosses"
+        tools:layout="@layout/fragment_bosses" />
+    <fragment
+        android:id="@+id/navigation_talismans"
+        android:name="com.nachopr.eldenringdatabase.view.talismans.TalismansFragment"
+        android:label="fragment_talismans"
+        tools:layout="@layout/fragment_talismans">
+        <action
+            android:id="@+id/action_talismansFragment_to_talismanDetailFragment"
+            app:destination="@id/talismanDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_weapons"
+        android:name="com.nachopr.eldenringdatabase.view.weapons.WeaponsFragment"
+        android:label="fragment_weapons"
+        tools:layout="@layout/fragment_weapons" />
+    <fragment
+        android:id="@+id/talismanDetailFragment"
+        android:name="com.nachopr.eldenringdatabase.view.talismans.TalismanDetailFragment"
+        android:label="fragment_talisman_detail"
+        tools:layout="@layout/fragment_talisman_detail">
+
+        <argument
+            android:name="talismanId"
+            app:argType="string" />
+    </fragment>
+
+</navigation>
