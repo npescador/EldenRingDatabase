@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.nachopr.eldenringdatabase.databinding.ItemTalismanBinding
+import com.nachopr.eldenringdatabase.databinding.ItemRowBinding
 import com.nachopr.eldenringdatabase.model.remote.Talismans
 
 class TalismanAdapter () : RecyclerView.Adapter<TalismanAdapter.TalismanViewHolder>() {
@@ -22,7 +22,7 @@ class TalismanAdapter () : RecyclerView.Adapter<TalismanAdapter.TalismanViewHold
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TalismanViewHolder {
         val binding =
-            ItemTalismanBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            ItemRowBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return TalismanViewHolder(binding)
     }
 
@@ -42,7 +42,7 @@ class TalismanAdapter () : RecyclerView.Adapter<TalismanAdapter.TalismanViewHold
         }
     }
 
-    inner class TalismanViewHolder(binding: ItemTalismanBinding) :
+    inner class TalismanViewHolder(binding: ItemRowBinding) :
             RecyclerView.ViewHolder(binding.root) {
         val rootView = binding.root
         val talismanName = binding.tvItemListName

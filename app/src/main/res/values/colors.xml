@@ -7,5 +7,16 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="yellow">#FFC107</color>
+    <color name="yellow">#F8EFA2</color>
+
+
+    <!-- Weapon attruibutes -->
+    <color name="phy">#FFFFFFFF</color>
+    <color name="mag">#03A9F4</color>
+    <color name="fire">#FF9800</color>
+    <color name="ligt">#FFEB3B</color>
+    <color name="holy">#F6ABC4</color>
+    <color name="crit">#A83A3A</color>
+    <color name="boost">#644BF1</color>
+
 </resources>

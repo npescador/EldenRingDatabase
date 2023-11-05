@@ -11,74 +11,77 @@
         android:id="@+id/mcv_talisman_detail_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="100dp"
         app:cardCornerRadius="8dp"
-        app:strokeColor="@color/yellow"
-        app:strokeWidth="2dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="#F8EFA2"
+        app:strokeWidth="1dp">
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:background="@color/yellow">
+            android:background="@color/black"
+            android:orientation="vertical">
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_talisman_detail_name"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:textSize="36sp"
                 android:background="@color/black"
-                android:textColor="@color/white"
+                android:gravity="center"
                 android:paddingHorizontal="8dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="28sp"
                 tools:text="CRIMSON AMBER MEDALLION" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/iv_talisman_detail"
-                android:layout_width="match_parent"
-                android:background="@color/black"
-                android:layout_height="300dp" />
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginVertical="32dp"
+                android:background="@color/black" />
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
+                android:layout_height="70dp"
+                android:background="@color/yellow"
                 android:orientation="horizontal">
 
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="start|center"
-                    android:text="@string/talisman_detail_effects"
-                    android:textSize="16sp"
-                    android:paddingStart="8dp"
-                    android:textColor="@color/white"
-                    tools:ignore="RtlSymmetry"
-                    android:background="#434343"
                     android:layout_margin="0.5dp"
-                    android:elevation="2dp"/>
+                    android:layout_weight="1"
+                    android:background="#434343"
+                    android:elevation="2dp"
+                    android:gravity="start|center"
+                    android:paddingStart="8dp"
+                    android:text="@string/talisman_detail_effects"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    tools:ignore="RtlSymmetry" />
 
                 <TextView
                     android:id="@+id/tv_talisman_detail_effect"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_margin="0.5dp"
                     android:layout_weight="4"
-                    android:gravity="start|center"
-                    tools:text="0.3"
-                    android:textSize="16sp"
-                    android:textColor="@color/white"
-                    android:paddingStart="8dp"
-                    tools:ignore="RtlSymmetry"
                     android:background="#434343"
-                    android:layout_margin="0.5dp"/>
+                    android:gravity="start|center"
+                    android:paddingStart="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    tools:ignore="RtlSymmetry"
+                    tools:text="0.3" />
 
 
             </androidx.appcompat.widget.LinearLayoutCompat>
@@ -86,28 +89,39 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#434343"
                 android:gravity="start|center"
-                android:text="@string/talisman_detail_description"
-                android:textSize="16sp"
-                android:textColor="@color/white"
                 android:paddingStart="8dp"
-                tools:ignore="RtlSymmetry"
-                android:background="#434343"/>
+                android:text="@string/talisman_detail_description"
+                android:paddingTop="8dp"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                tools:ignore="RtlSymmetry" />
 
-            <TextView
-                android:id="@+id/tv_talisman_detail_description"
+            <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="start|center|top"
-                tools:text="Talisman description with info about location and how to obtain"
-                android:textSize="16sp"
-                android:textColor="@color/white"
-                android:textStyle="italic"
-                android:paddingStart="24dp"
-                android:paddingEnd="8dp"
-                android:paddingTop="8dp"
-                tools:ignore="RtlSymmetry"
-                android:background="#434343"/>
+                android:background="#434343">
+
+                <TextView
+                    android:id="@+id/tv_talisman_detail_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center|top"
+                    android:overScrollMode="ifContentScrolls"
+                    android:paddingStart="24dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="8dp"
+                    android:scrollbarSize="4dp"
+                    android:scrollbarStyle="insideOverlay"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="italic"
+                    tools:ignore="RtlSymmetry"
+                    tools:text="Talisman description with info about location and how to obtain" />
+
+            </ScrollView>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 

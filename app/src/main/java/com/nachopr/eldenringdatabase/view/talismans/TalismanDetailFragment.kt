@@ -67,7 +67,7 @@ class TalismanDetailFragment : Fragment() {
             .load(talisman.image)
             .into(binding.ivTalismanDetail)
 
-        binding.tvTalismanDetailEffect.text = talisman.effects
+        binding.tvTalismanDetailEffect.text = talisman.effect
         binding.tvTalismanDetailDescription.text = talisman.description
     }
 

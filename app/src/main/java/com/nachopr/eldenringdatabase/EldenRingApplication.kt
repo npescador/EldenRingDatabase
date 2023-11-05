@@ -7,6 +7,7 @@ import android.os.Build
 import com.nachopr.eldenringdatabase.di.baseModule
 import com.nachopr.eldenringdatabase.di.talismanModule
 import com.nachopr.eldenringdatabase.common.NOTIFICATION_CHANNEL_ID
+import com.nachopr.eldenringdatabase.di.weaponModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -17,7 +18,7 @@ class EldenRingApplication: Application() {
 
         startKoin {
             androidContext(this@EldenRingApplication)
-            modules(listOf(baseModule, talismanModule)).allowOverride(true)
+            modules(listOf(baseModule, talismanModule, weaponModule)).allowOverride(true)
         }
 
         createNotificationChannel()

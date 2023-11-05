@@ -28,7 +28,11 @@
         android:id="@+id/navigation_weapons"
         android:name="com.nachopr.eldenringdatabase.view.weapons.WeaponsFragment"
         android:label="fragment_weapons"
-        tools:layout="@layout/fragment_weapons" />
+        tools:layout="@layout/fragment_weapons" >
+        <action
+            android:id="@+id/action_navigation_weapons_to_weaponDetailFragment"
+            app:destination="@id/weaponDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/talismanDetailFragment"
         android:name="com.nachopr.eldenringdatabase.view.talismans.TalismanDetailFragment"
@@ -37,6 +41,15 @@
 
         <argument
             android:name="talismanId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/weaponDetailFragment"
+        android:name="com.nachopr.eldenringdatabase.view.weapons.WeaponDetailFragment"
+        android:label="fragment_weapon_detail"
+        tools:layout="@layout/fragment_weapon_detail" >
+        <argument
+            android:name="weaponId"
             app:argType="string" />
     </fragment>
 

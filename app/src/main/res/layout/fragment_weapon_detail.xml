@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".view.weapons.WeaponDetailFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mcv_weapon_detail_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="100dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="#F8EFA2"
+        app:strokeWidth="1dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_weapon_detail_name"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:background="@color/black"
+                android:gravity="center"
+                android:paddingHorizontal="8dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                tools:text="CRIMSON AMBER MEDALLION" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_weapon_detail"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_marginVertical="32dp"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#434343"
+                android:orientation="horizontal"
+                tools:ignore="UselessLeaf">
+
+
+                <LinearLayout
+                    android:id="@+id/ll_attack_attributes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    tools:ignore="UselessLeaf">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="8dp"
+                        android:background="#434343"
+                        android:gravity="center"
+                        android:text="@string/attack"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:ignore="RtlSymmetry" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_attack_attribute_phy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#434343"
+                            android:textAlignment="textEnd"
+                            android:textSize="16sp"
+                            android:textColor="@color/white"
+                            android:text="@string/phy"
+                            tools:ignore="RtlSymmetry" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_attack_attribute_phy_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#434343"
+                            android:paddingStart="8dp"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            tools:ignore="RtlSymmetry"
+                            tools:text="0" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#434343"
+                            android:text="@string/mag"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/mag"
+                            android:textSize="16sp"
+                            tools:ignore="RtlSymmetry" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_attack_attribute_mag_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#434343"
+                            android:paddingStart="8dp"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            tools:ignore="RtlSymmetry"
+                            tools:text="0" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#434343"
+                            android:text="@string/fire"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/fire"
+                            android:textSize="16sp"
+                            tools:ignore="RtlSymmetry" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_attack_attribute_fire_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#434343"
+                            android:paddingStart="8dp"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            tools:ignore="RtlSymmetry"
+                            tools:text="0" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#434343"
+                            android:text="@string/ligt"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/ligt"
+                            android:textSize="16sp"
+                            tools:ignore="RtlSymmetry" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_attack_attribute_ligt_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#434343"
+                            android:paddingStart="8dp"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            tools:ignore="RtlSymmetry"
+                            tools:text="0" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#434343"
+                            android:text="@string/holy"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/holy"
+                            android:textSize="16sp"
+                            tools:ignore="RtlSymmetry" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_attack_attribute_holy_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#434343"
+                            android:paddingStart="8dp"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            tools:ignore="RtlSymmetry"
+                            tools:text="0" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#434343"
+                            android:text="@string/crit"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/crit"
+                            android:textSize="16sp"
+                            tools:ignore="RtlSymmetry" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_attack_attribute_crit_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#434343"
+                            android:paddingStart="8dp"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            tools:ignore="RtlSymmetry"
+                            tools:text="0" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/darker_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    tools:ignore="UselessLeaf">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="8dp"
+                        android:background="#434343"
+                        android:gravity="center"
+                        android:text="@string/guard"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:ignore="RtlSymmetry" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_guard_attribute_phy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#434343"
+                            android:text="@string/phy"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            tools:ignore="RtlSymmetry" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_guard_attribute_phy_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#434343"
+                            android:paddingStart="8dp"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            tools:ignore="RtlSymmetry"
+                            tools:text="0" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#434343"
+                            android:text="@string/mag"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/mag"
+                            android:textSize="16sp"
+                            tools:ignore="RtlSymmetry" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_guard_attribute_mag_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#434343"
+                            android:paddingStart="8dp"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            tools:ignore="RtlSymmetry"
+                            tools:text="0" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#434343"
+                            android:text="@string/fire"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/fire"
+                            android:textSize="16sp"
+                            tools:ignore="RtlSymmetry" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_guard_attribute_fire_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#434343"
+                            android:paddingStart="8dp"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            tools:ignore="RtlSymmetry"
+                            tools:text="0" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#434343"
+                            android:text="@string/ligt"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/ligt"
+                            android:textSize="16sp"
+                            tools:ignore="RtlSymmetry" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_guard_attribute_ligt_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#434343"
+                            android:paddingStart="8dp"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            tools:ignore="RtlSymmetry"
+                            tools:text="0" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#434343"
+                            android:text="@string/holy"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/holy"
+                            android:textSize="16sp"
+                            tools:ignore="RtlSymmetry" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_guard_attribute_holy_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#434343"
+                            android:paddingStart="8dp"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            tools:ignore="RtlSymmetry"
+                            tools:text="0" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#434343"
+                            android:text="@string/boost"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/boost"
+                            android:textSize="16sp"
+                            tools:ignore="RtlSymmetry" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_guard_attribute_crit_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#434343"
+                            android:paddingStart="8dp"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            tools:ignore="RtlSymmetry"
+                            tools:text="0" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <ProgressBar
+        android:id="@+id/pb_talisman_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

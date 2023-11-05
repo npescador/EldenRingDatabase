@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+   <declare-styleable name="WeaponAttackView">
+        <attr name="attackAttributeKey" format="string" />
+        <attr name="attackAttributeValue" format="string" />
+        <attr name="attackAttributeKeyColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="WeaponGuardView">
+        <attr name="guardAttributeKey" format="string" />
+        <attr name="guardAttributeValue" format="string" />
+        <attr name="guardAttributeKeyColor" format="color" />
+    </declare-styleable>
+
+</resources>

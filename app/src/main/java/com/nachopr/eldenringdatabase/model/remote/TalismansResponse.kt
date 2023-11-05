@@ -15,6 +15,6 @@ data class Talismans(
     val name: String,
     val image: String,
     val description: String,
-    val effects: String
+    val effect: String
 )
 

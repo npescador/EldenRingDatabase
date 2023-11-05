@@ -6,6 +6,10 @@ data class BossesResponse(
     @SerializedName("data") val bosses: List<Boss>
 )
 
+data class BossResponse(
+    @SerializedName("data") val boss: Boss
+)
+
 data class Boss(
     val id: String,
     val name: String,

@@ -31,7 +31,6 @@ class MusicPlayerService : Service() {
             playMusic()
             isPlaying = true
         } else if(intent.action == STOPFOREGROUND_ACTION) {
-            stopForeground(true)
             stopMusic()
             isPlaying = false
             stopSelf()

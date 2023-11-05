@@ -2,8 +2,12 @@ package com.nachopr.eldenringdatabase.model.remote
 
 import com.google.gson.annotations.SerializedName
 
-data class WeaponResponse(
+data class WeaponsResponse(
     @SerializedName("data") val weapons: List<Weapon>
+)
+
+data class WeaponResponse(
+    @SerializedName("data") val weapon: Weapon
 )
 
 data class Weapon(
@@ -16,7 +20,7 @@ data class Weapon(
     val scalesWith: List<ScalesWith>,
     val requiredAttributes: List<RequiredAttributes>,
     val category: String,
-    val weight: Double
+    val weight: String
 )
 
 data class Attack(
@@ -26,15 +30,15 @@ data class Attack(
 
 data class Defends(
     val name: String,
-    val amount: Long
+    val amount: String
 )
 
 data class ScalesWith(
     val name: String,
-    val scaling: Double
+    val scaling: String
 )
 
 data class RequiredAttributes(
     val name: String,
-    val amount: Long
+    val amount: String
 )

@@ -6,16 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".view.talismans.TalismansFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_talismans_list"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:itemCount="5"
-        tools:listitem="@layout/item_talisman" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_talismans_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:itemCount="5"
+            android:clipToPadding="false"
+            android:layout_gravity="center"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_row" />
 
     <ProgressBar
         android:id="@+id/pb_talisman_list"

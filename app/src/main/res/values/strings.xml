@@ -16,6 +16,17 @@
     <string name="action_ok">Aceptar</string>
     <string name="action_retry">Reintentar</string>
     <string name="error">Error</string>
+
+
+    <string name="attack">Attack</string>
+    <string name="guard">Guard</string>
+    <string name="phy">Phy</string>
+    <string name="mag">Mag</string>
+    <string name="fire">Fire</string>
+    <string name="ligt">Ligt</string>
+    <string name="holy">Holy</string>
+    <string name="crit">Crit</string>
+    <string name="boost">Boost</string>
     <string name="talisman_detail_description">Description</string>
     <string name="talisman_detail_effects">Effects</string>
 </resources>
