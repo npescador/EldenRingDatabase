@@ -11,11 +11,6 @@
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
     <fragment
-        android:id="@+id/navigation_bosses"
-        android:name="com.nachopr.eldenringdatabase.view.bosses.BossesFragment"
-        android:label="fragment_bosses"
-        tools:layout="@layout/fragment_bosses" />
-    <fragment
         android:id="@+id/navigation_talismans"
         android:name="com.nachopr.eldenringdatabase.view.talismans.TalismansFragment"
         android:label="fragment_talismans"
@@ -52,5 +47,10 @@
             android:name="weaponId"
             app:argType="string" />
     </fragment>
+    <activity
+        android:id="@+id/splashActivity"
+        android:name="com.nachopr.eldenringdatabase.view.SplashActivity"
+        android:label="activity_splash"
+        tools:layout="@layout/activity_splash" />
 
 </navigation>

@@ -1,10 +1,10 @@
 package com.nachopr.eldenringdatabase.view.talismans
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
@@ -12,7 +12,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.nachopr.eldenringdatabase.R
 import com.nachopr.eldenringdatabase.common.ResourceState
 import com.nachopr.eldenringdatabase.databinding.FragmentTalismanDetailBinding
-import com.nachopr.eldenringdatabase.model.remote.Talismans
+import com.nachopr.eldenringdatabase.model.local.Talisman
 
 class TalismanDetailFragment : Fragment() {
     private val binding: FragmentTalismanDetailBinding by lazy {
@@ -60,7 +60,7 @@ class TalismanDetailFragment : Fragment() {
         }
     }
 
-    private fun initUI(talisman: Talismans) {
+    private fun initUI(talisman: Talisman) {
         binding.tvTalismanDetailName.text = talisman.name
 
         Glide.with(requireContext())

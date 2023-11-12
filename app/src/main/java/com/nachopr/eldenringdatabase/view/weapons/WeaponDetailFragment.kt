@@ -71,6 +71,9 @@ class WeaponDetailFragment : Fragment() {
             .load(weapon.image)
             .into(binding.ivWeaponDetail)
 
+        binding.tvWeaponCategory.text = weapon.category
+        binding.tvWeaponWeight.text = weapon.weight
+
         weapon.attack.forEach { attribute ->
             when(attribute.name.uppercase()){
                 "PHY"-> binding.tvAttackAttributePhyValue.text = attribute.amount.toString()
@@ -91,6 +94,38 @@ class WeaponDetailFragment : Fragment() {
                 "HOLY" ->  binding.tvGuardAttributeHolyValue.text = attribute.amount
                 "FIRE" ->  binding.tvGuardAttributeFireValue.text = attribute.amount
                 "BOOST" -> binding.tvGuardAttributeCritValue.text = attribute.amount
+                else -> {}
+            }
+        }
+
+        binding.tvScaleStrValue.text =  " - "
+        binding.tvScaleDexValue.text =  " - "
+        binding.tvScaleIntlValue.text = " - "
+        binding.tvScaleFthValue.text =  " - "
+        binding.tvScaleArcValue.text =  " - "
+        weapon.scalesWith.forEach { scale ->
+            when(scale.name.uppercase()){
+                "STR" ->   binding.tvScaleStrValue.text =  scale.scaling
+                "DEX" ->   binding.tvScaleDexValue.text =  scale.scaling
+                "INT" ->  binding.tvScaleIntlValue.text = scale.scaling
+                "FTH" ->  binding.tvScaleFthValue.text = scale.scaling
+                "ARC" ->  binding.tvScaleArcValue.text = scale.scaling
+                else -> {}
+            }
+        }
+
+        binding.tvRequiresStrValue.text =  " - "
+        binding.tvRequiresDexValue.text =  " - "
+        binding.tvRequiresIntlValue.text = " - "
+        binding.tvRequiresFthValue.text =  " - "
+        binding.tvRequiresArcValue.text =  " - "
+        weapon.requiredAttributes.forEach { requiredAttribute ->
+            when(requiredAttribute.name.uppercase()){
+                "STR" ->    binding.tvRequiresStrValue.text =  requiredAttribute.amount
+                "DEX" ->    binding.tvRequiresDexValue.text =  requiredAttribute.amount
+                "INT" ->   binding.tvRequiresIntlValue.text =  requiredAttribute.amount
+                "FTH" ->   binding.tvRequiresFthValue.text  =  requiredAttribute.amount
+                "ARC" ->   binding.tvRequiresArcValue.text  =  requiredAttribute.amount
                 else -> {}
             }
         }

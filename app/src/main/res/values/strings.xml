@@ -36,4 +36,9 @@
     <string name="arc">ARC</string>
     <string name="talisman_detail_description">Description</string>
     <string name="talisman_detail_effects">Effects</string>
+    <string name="category">Category</string>
+    <string name="weight">Weight</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>
