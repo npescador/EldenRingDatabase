@@ -38,7 +38,7 @@
     <string name="talisman_detail_effects">Effects</string>
     <string name="category">Category</string>
     <string name="weight">Weight</string>
-    <string name="title_activity_splash">SplashActivity</string>
+    <string name="title_activity_splash">@string/app_name</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

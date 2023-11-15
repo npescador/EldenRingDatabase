@@ -11,16 +11,16 @@
         android:id="@+id/mcv_weapon_detail_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginHorizontal="24dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="100dp"
-        app:cardCornerRadius="8dp"
+        android:layout_marginHorizontal="@dimen/weapon_card_margin_horizontal"
+        android:layout_marginTop="@dimen/weapon_card_margin_top"
+        android:layout_marginBottom="@dimen/weapon_card_margin_bottom"
+        app:cardCornerRadius="@dimen/weapon_card_corner_radius"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:strokeColor="#F8EFA2"
-        app:strokeWidth="1dp">
+        app:strokeColor="@color/yellow"
+        app:strokeWidth="@dimen/weapon_card_stroke_width">
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
@@ -31,13 +31,13 @@
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_weapon_detail_name"
                 android:layout_width="match_parent"
-                android:layout_height="75dp"
+                android:layout_height="@dimen/weapon_detail_name_layout_height"
                 android:background="@color/black"
                 android:gravity="center"
-                android:paddingHorizontal="8dp"
+                android:paddingHorizontal="@dimen/weapon_detail_name_padding_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="24sp"
+                android:textSize="@dimen/weapon_detail_name_text_size"
                 tools:text="CRIMSON AMBER MEDALLION" />
 
             <LinearLayout
@@ -47,11 +47,11 @@
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/iv_weapon_detail"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="@dimen/weapon_image_view_layout_width_height"
+                    android:layout_height="@dimen/weapon_image_view_layout_width_height"
                     android:layout_gravity="center"
-                    android:layout_marginVertical="32dp"
-                    android:layout_marginStart="24dp"
+                    android:layout_marginVertical="@dimen/weapon_image_view_margin_vertical"
+                    android:layout_marginStart="@dimen/weapon_image_view_margin_start"
                     android:background="@color/black" />
 
                 <LinearLayout
@@ -65,7 +65,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/category"
                         android:textColor="@color/white"
-                        android:textSize="16sp" />
+                        android:textSize="@dimen/category_title_text_size" />
 
                     <TextView
                         android:id="@+id/tv_weapon_category"
@@ -73,8 +73,8 @@
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
                         android:textColor="@color/white"
-                        android:textSize="14sp"
-                        android:layout_marginTop="4dp"
+                        android:textSize="@dimen/category_title_value_text_size"
+                        android:layout_marginTop="@dimen/category_title_value_margin_top"
                         tools:text="Axe" />
 
                     <LinearLayout
@@ -88,15 +88,15 @@
                             android:layout_height="wrap_content"
                             android:text="@string/weight"
                             android:textColor="@color/white"
-                            android:textSize="16sp" />
+                            android:textSize="@dimen/weight_title_text_size" />
 
                         <TextView
                             android:id="@+id/tv_weapon_weight"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="8dp"
+                            android:layout_marginStart="@dimen/weight_title_value_margin_start"
                             android:textColor="@color/white"
-                            android:textSize="14sp"
+                            android:textSize="@dimen/weight_title_value_text_size"
                             tools:text="2,5" />
 
                     </LinearLayout>
@@ -110,7 +110,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#434343"
+                android:background="@color/attribute_background"
                 android:orientation="horizontal"
                 tools:ignore="UselessLeaf">
 
@@ -124,16 +124,9 @@
                     tools:ignore="UselessLeaf">
 
                     <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginVertical="8dp"
-                        android:background="#434343"
-                        android:gravity="center"
+                        style="@style/WeaponAttributesSectionTitle"
                         android:text="@string/attack"
-                        android:textAlignment="center"
-                        android:textColor="@color/white"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
+                        android:layout_marginVertical="@dimen/weapon_attribute_title_margin_vertical"
                         tools:ignore="RtlSymmetry" />
 
                     <LinearLayout
@@ -142,26 +135,14 @@
                         android:orientation="horizontal">
 
                         <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="#434343"
+                            style="@style/WeaponAttributes"
                             android:text="@string/phy"
-                            android:textAlignment="textEnd"
                             android:textColor="@color/white"
-                            android:textSize="16sp"
-                            tools:ignore="RtlSymmetry" />
+                            />
 
                         <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/tv_attack_attribute_phy_value"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="#434343"
-                            android:paddingStart="8dp"
-                            android:textAlignment="textStart"
-                            android:textColor="@color/white"
-                            android:textSize="16sp"
+                            style="@style/WeaponAttributesValues"
                             tools:ignore="RtlSymmetry"
                             tools:text="0" />
 
@@ -173,26 +154,14 @@
                         android:orientation="horizontal">
 
                         <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="#434343"
+                            style="@style/WeaponAttributes"
                             android:text="@string/mag"
-                            android:textAlignment="textEnd"
                             android:textColor="@color/mag"
-                            android:textSize="16sp"
                             tools:ignore="RtlSymmetry" />
 
                         <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/tv_attack_attribute_mag_value"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="#434343"
-                            android:paddingStart="8dp"
-                            android:textAlignment="textStart"
-                            android:textColor="@color/white"
-                            android:textSize="16sp"
+                            style="@style/WeaponAttributesValues"
                             tools:ignore="RtlSymmetry"
                             tools:text="0" />
 
@@ -204,26 +173,14 @@
                         android:orientation="horizontal">
 
                         <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="#434343"
+                            style="@style/WeaponAttributes"
                             android:text="@string/fire"
-                            android:textAlignment="textEnd"
                             android:textColor="@color/fire"
-                            android:textSize="16sp"
                             tools:ignore="RtlSymmetry" />
 
                         <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/tv_attack_attribute_fire_value"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="#434343"
-                            android:paddingStart="8dp"
-                            android:textAlignment="textStart"
-                            android:textColor="@color/white"
-                            android:textSize="16sp"
+                            style="@style/WeaponAttributesValues"
                             tools:ignore="RtlSymmetry"
                             tools:text="0" />
 
@@ -235,26 +192,14 @@
                         android:orientation="horizontal">
 
                         <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="#434343"
+                            style="@style/WeaponAttributes"
                             android:text="@string/ligt"
-                            android:textAlignment="textEnd"
                             android:textColor="@color/ligt"
-                            android:textSize="16sp"
                             tools:ignore="RtlSymmetry" />
 
                         <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/tv_attack_attribute_ligt_value"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="#434343"
-                            android:paddingStart="8dp"
-                            android:textAlignment="textStart"
-                            android:textColor="@color/white"
-                            android:textSize="16sp"
+                            style="@style/WeaponAttributesValues"
                             tools:ignore="RtlSymmetry"
                             tools:text="0" />
 
@@ -266,26 +211,14 @@
                         android:orientation="horizontal">
 
                         <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="#434343"
+                            style="@style/WeaponAttributes"
                             android:text="@string/holy"
-                            android:textAlignment="textEnd"
                             android:textColor="@color/holy"
-                            android:textSize="16sp"
                             tools:ignore="RtlSymmetry" />
 
                         <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/tv_attack_attribute_holy_value"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="#434343"
-                            android:paddingStart="8dp"
-                            android:textAlignment="textStart"
-                            android:textColor="@color/white"
-                            android:textSize="16sp"
+                            style="@style/WeaponAttributesValues"
                             tools:ignore="RtlSymmetry"
                             tools:text="0" />
 
@@ -297,26 +230,14 @@
                         android:orientation="horizontal">
 
                         <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="#434343"
+                            style="@style/WeaponAttributes"
                             android:text="@string/crit"
-                            android:textAlignment="textEnd"
                             android:textColor="@color/crit"
-                            android:textSize="16sp"
                             tools:ignore="RtlSymmetry" />
 
                         <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/tv_attack_attribute_crit_value"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="#434343"
-                            android:paddingStart="8dp"
-                            android:textAlignment="textStart"
-                            android:textColor="@color/white"
-                            android:textSize="16sp"
+                            style="@style/WeaponAttributesValues"
                             tools:ignore="RtlSymmetry"
                             tools:text="0" />
 
@@ -339,13 +260,13 @@
                     <com.google.android.material.textview.MaterialTextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginVertical="8dp"
-                        android:background="#434343"
+                        android:layout_marginVertical="@dimen/weapon_attribute_title_margin_vertical"
+                        android:background="@color/attribute_background"
                         android:gravity="center"
                         android:text="@string/guard"
                         android:textAlignment="center"
                         android:textColor="@color/white"
-                        android:textSize="16sp"
+                        android:textSize="@dimen/weapon_attribute_title_text_size"
                         android:textStyle="bold"
                         tools:ignore="RtlSymmetry" />
 
@@ -355,26 +276,15 @@
                         android:orientation="horizontal">
 
                         <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="#434343"
+                            style="@style/WeaponAttributes"
                             android:text="@string/phy"
-                            android:textAlignment="textEnd"
                             android:textColor="@color/white"
-                            android:textSize="16sp"
                             tools:ignore="RtlSymmetry" />
 
                         <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/tv_guard_attribute_phy_value"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="#434343"
-                            android:paddingStart="8dp"
-                            android:textAlignment="textStart"
+                            style="@style/WeaponAttributesValues"
                             android:textColor="@color/white"
-                            android:textSize="16sp"
                             tools:ignore="RtlSymmetry"
                             tools:text="0" />
 
@@ -386,26 +296,15 @@
                         android:orientation="horizontal">
 
                         <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="#434343"
+                            style="@style/WeaponAttributes"
                             android:text="@string/mag"
-                            android:textAlignment="textEnd"
                             android:textColor="@color/mag"
-                            android:textSize="16sp"
                             tools:ignore="RtlSymmetry" />
 
                         <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/tv_guard_attribute_mag_value"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="#434343"
-                            android:paddingStart="8dp"
-                            android:textAlignment="textStart"
+                            style="@style/WeaponAttributesValues"
                             android:textColor="@color/white"
-                            android:textSize="16sp"
                             tools:ignore="RtlSymmetry"
                             tools:text="0" />
 
@@ -417,26 +316,14 @@
                         android:orientation="horizontal">
 
                         <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="#434343"
+                            style="@style/WeaponAttributes"
                             android:text="@string/fire"
-                            android:textAlignment="textEnd"
                             android:textColor="@color/fire"
-                            android:textSize="16sp"
                             tools:ignore="RtlSymmetry" />
 
                         <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/tv_guard_attribute_fire_value"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="#434343"
-                            android:paddingStart="8dp"
-                            android:textAlignment="textStart"
-                            android:textColor="@color/white"
-                            android:textSize="16sp"
+                            style="@style/WeaponAttributesValues"
                             tools:ignore="RtlSymmetry"
                             tools:text="0" />
 
@@ -448,26 +335,14 @@
                         android:orientation="horizontal">
 
                         <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="#434343"
+                            style="@style/WeaponAttributes"
                             android:text="@string/ligt"
-                            android:textAlignment="textEnd"
                             android:textColor="@color/ligt"
-                            android:textSize="16sp"
                             tools:ignore="RtlSymmetry" />
 
                         <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/tv_guard_attribute_ligt_value"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="#434343"
-                            android:paddingStart="8dp"
-                            android:textAlignment="textStart"
-                            android:textColor="@color/white"
-                            android:textSize="16sp"
+                            style="@style/WeaponAttributesValues"
                             tools:ignore="RtlSymmetry"
                             tools:text="0" />
 
@@ -479,26 +354,14 @@
                         android:orientation="horizontal">
 
                         <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="#434343"
+                            style="@style/WeaponAttributes"
                             android:text="@string/holy"
-                            android:textAlignment="textEnd"
                             android:textColor="@color/holy"
-                            android:textSize="16sp"
                             tools:ignore="RtlSymmetry" />
 
                         <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/tv_guard_attribute_holy_value"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="#434343"
-                            android:paddingStart="8dp"
-                            android:textAlignment="textStart"
-                            android:textColor="@color/white"
-                            android:textSize="16sp"
+                            style="@style/WeaponAttributesValues"
                             tools:ignore="RtlSymmetry"
                             tools:text="0" />
 
@@ -510,26 +373,14 @@
                         android:orientation="horizontal">
 
                         <com.google.android.material.textview.MaterialTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="#434343"
+                            style="@style/WeaponAttributes"
                             android:text="@string/boost"
-                            android:textAlignment="textEnd"
                             android:textColor="@color/boost"
-                            android:textSize="16sp"
                             tools:ignore="RtlSymmetry" />
 
                         <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/tv_guard_attribute_crit_value"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="#434343"
-                            android:paddingStart="8dp"
-                            android:textAlignment="textStart"
-                            android:textColor="@color/white"
-                            android:textSize="16sp"
+                            style="@style/WeaponAttributesValues"
                             tools:ignore="RtlSymmetry"
                             tools:text="0" />
 
@@ -557,12 +408,12 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginVertical="8dp"
-                        android:paddingStart="16dp"
                         android:text="@string/scale"
                         android:textAlignment="textStart"
                         android:textColor="@color/white"
                         android:textSize="16sp"
                         android:textStyle="bold"
+                        android:paddingStart="16dp"
                         tools:ignore="RtlSymmetry" />
 
                     <LinearLayout

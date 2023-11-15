@@ -2,4 +2,55 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+
+
+    <!-- Splash screen -->
+    <dimen name="lottie_height">50dp</dimen>
+
+    <!-- Bottom Navigation view -->
+    <dimen name="item_icon_size">40dp</dimen>
+    <dimen name="bottom_navigation_layout_width">0dp</dimen>
+    <dimen name="bottom_navigation_layout_height">70dp</dimen>
+
+
+    <!-- Weapon Detail Fragment -->
+
+    <!-- Card -->
+    <dimen name="weapon_card_margin_horizontal">24dp</dimen>
+    <dimen name="weapon_card_margin_top">16dp</dimen>
+    <dimen name="weapon_card_margin_bottom">100dp</dimen>
+    <dimen name="weapon_card_corner_radius">8dp</dimen>
+    <dimen name="weapon_card_stroke_width">1dp</dimen>
+
+    <!-- Weapon detail name -->
+    <dimen name="weapon_detail_name_layout_height">75dp</dimen>
+    <dimen name="weapon_detail_name_padding_horizontal">8dp</dimen>
+    <dimen name="weapon_detail_name_text_size">24sp</dimen>
+
+    <!-- Weapon image view -->
+    <dimen name="weapon_image_view_layout_width_height">150dp</dimen>
+    <dimen name="weapon_image_view_margin_vertical">32dp</dimen>
+    <dimen name="weapon_image_view_margin_start">24dp</dimen>
+
+    <!-- Wapon Category -->
+    <dimen name="category_title_text_size">16sp</dimen>
+    <dimen name="category_title_value_text_size">14sp</dimen>
+    <dimen name="category_title_value_margin_top">4dp</dimen>
+
+    <!-- Wapon Weight -->
+    <dimen name="weight_title_text_size">16sp</dimen>
+    <dimen name="weight_title_value_text_size">14sp</dimen>
+    <dimen name="weight_title_value_margin_start">8dp</dimen>
+
+
+    <!-- Weapon Attribute Title -->
+    <dimen name="weapon_attribute_title_margin_vertical">8dp</dimen>
+    <dimen name="weapon_attribute_title_text_size">16sp</dimen>
+
+    <!-- margins -->
+    <dimen name="margin_0">0dp</dimen>
+    <dimen name="margin_8">8dp</dimen>
+
+
+
 </resources>
