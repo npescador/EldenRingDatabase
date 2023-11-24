@@ -12,7 +12,6 @@
     <dimen name="bottom_navigation_layout_width">0dp</dimen>
     <dimen name="bottom_navigation_layout_height">70dp</dimen>
 
-
     <!-- Weapon Detail Fragment -->
 
     <!-- Card -->
@@ -47,10 +46,59 @@
     <dimen name="weapon_attribute_title_margin_vertical">8dp</dimen>
     <dimen name="weapon_attribute_title_text_size">16sp</dimen>
 
+
+    <!-- Item Row -->
+    <dimen name="item_row_layout_width">300dp</dimen>
+    <dimen name="item_row_layout_height">100dp</dimen>
+    <dimen name="item_row_layout_margin">4dp</dimen>
+    <dimen name="item_row_elevation">2dp</dimen>
+    <dimen name="item_row_card_corner_radius">8dp</dimen>
+    <dimen name="item_row_card_stroke_width">@dimen/global_stroke_with</dimen>
+    <dimen name="item_row_image_width">75dp</dimen>
+    <dimen name="item_row_image_height">75dp</dimen>
+    <dimen name="item_row_name_text_size">16sp</dimen>
+
+
+    <!--Talisman Detail Fragment-->
+    <dimen name="talisman_detail_card_layout_margin_horizontal">24dp</dimen>
+    <dimen name="talisman_detail_card_layout_margin_top">16dp</dimen>
+    <dimen name="talisman_detail_card_layout_margin_Bottom">100dp</dimen>
+
+    <dimen name="talisman_detail_tv_name_layout_height">150dp</dimen>
+    <dimen name="talisman_detail_tv_name_paddingHorizontal">8dp</dimen>
+    <dimen name="talisman_detail_tv_name_text_size">28sp</dimen>
+
+    <dimen name="talisman_detail_image_width">200dp</dimen>
+    <dimen name="talisman_detail_image_height">200dp</dimen>
+    <dimen name="talisman_detail_image_margin_vertical">32dp</dimen>
+
+    <dimen name="talisman_detail_ll_effects_height">70dp</dimen>
+
+
+    <dimen name="talisman_detail_tv_effect_title_width">0dp</dimen>
+    <dimen name="talisman_detail_tv_effect_title_margin">0.5dp</dimen>
+    <dimen name="talisman_detail_tv_effect_title_elevation">2dp</dimen>
+    <dimen name="talisman_detail_tv_effect_title_padding_start">8dp</dimen>
+    <dimen name="talisman_detail_tv_effect_title_text_size">16sp</dimen>
+
+    <dimen name="talisman_detail_tv_description_title_padding_start">8dp</dimen>
+    <dimen name="talisman_detail_tv_description_title_padding_top">8dp</dimen>
+    <dimen name="talisman_detail_tv_description_title_text_size">16sp</dimen>
+    <dimen name="talisman_detail_tv_description_margin_start">24dp</dimen>
+
+
+
+
+    <!-- global values -->
+    <dimen name="global_stroke_with">1dp</dimen>
+    <dimen name="global_corner_radius">8dp</dimen>
+    <dimen name="global_padding_start">8dp</dimen>
+    <dimen name="global_padding_end">8dp</dimen>
+    <dimen name="global_padding_top">8dp</dimen>
+    <dimen name="global_text_size">16sp</dimen>
+
     <!-- margins -->
     <dimen name="margin_0">0dp</dimen>
     <dimen name="margin_8">8dp</dimen>
-
-
 
 </resources>
