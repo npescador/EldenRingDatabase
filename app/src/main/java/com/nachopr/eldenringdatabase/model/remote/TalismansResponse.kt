@@ -1,6 +1,7 @@
 package com.nachopr.eldenringdatabase.model.remote
 
 import com.google.gson.annotations.SerializedName
+import com.nachopr.eldenringdatabase.model.local.Talisman
 
 data class TalismansResponse(
     @SerializedName("data") val talismans: List<Talismans>
@@ -17,4 +18,6 @@ data class Talismans(
     val description: String,
     val effect: String
 )
+
+
 

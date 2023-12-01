@@ -18,6 +18,8 @@
     <string name="error">Error</string>
 
 
+    <string name="scale">Scale</string>
+    <string name="requires">Requires</string>
     <string name="attack">Attack</string>
     <string name="guard">Guard</string>
     <string name="phy">Phy</string>
@@ -27,6 +29,16 @@
     <string name="holy">Holy</string>
     <string name="crit">Crit</string>
     <string name="boost">Boost</string>
+    <string name="str">STR</string>
+    <string name="dex">DEX</string>
+    <string name="intl">INT</string>
+    <string name="fth">FTH</string>
+    <string name="arc">ARC</string>
     <string name="talisman_detail_description">Description</string>
     <string name="talisman_detail_effects">Effects</string>
+    <string name="category">Category</string>
+    <string name="weight">Weight</string>
+    <string name="title_activity_splash">@string/app_name</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

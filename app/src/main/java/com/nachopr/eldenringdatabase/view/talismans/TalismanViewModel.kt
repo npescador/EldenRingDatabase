@@ -7,13 +7,13 @@ import androidx.lifecycle.viewModelScope
 import com.nachopr.eldenringdatabase.common.ResourceState
 import com.nachopr.eldenringdatabase.domain.talismans.usecase.GetTalismansDetailUseCase
 import com.nachopr.eldenringdatabase.domain.talismans.usecase.GetTalismansUseCase
-import com.nachopr.eldenringdatabase.model.remote.Talismans
+import com.nachopr.eldenringdatabase.model.local.Talisman
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-typealias TalismanListState = ResourceState<List<Talismans>>
-typealias TalismanDetailState = ResourceState<Talismans>
+typealias TalismanListState = ResourceState<List<Talisman>>
+typealias TalismanDetailState = ResourceState<Talisman>
 
 class TalismanViewModel(
     private val talismansUseCase: GetTalismansUseCase,
@@ -36,7 +36,7 @@ class TalismanViewModel(
 
         viewModelScope.launch(Dispatchers.IO) {
             try {
-                val talismanList = talismansUseCase.getTalismans()
+                val talismanList = talismansUseCase.invoke()
 
                 withContext(Dispatchers.Main) {
                     talismanMutableLiveData.value = ResourceState.Success(talismanList)
@@ -55,7 +55,7 @@ class TalismanViewModel(
 
         viewModelScope.launch(Dispatchers.IO) {
             try {
-                val talisman = talismanDetailUseCase.getTalismanDetail(id)
+                val talisman = talismanDetailUseCase.invoke(id)
 
                 withContext(Dispatchers.Main) {
                     talismanDetailMutableLiveData.value = ResourceState.Success(talisman)

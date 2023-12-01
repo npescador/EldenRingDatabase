@@ -6,16 +6,16 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.nachopr.eldenringdatabase.databinding.ItemRowBinding
-import com.nachopr.eldenringdatabase.model.remote.Talismans
+import com.nachopr.eldenringdatabase.model.local.Talisman
 
 class TalismanAdapter () : RecyclerView.Adapter<TalismanAdapter.TalismanViewHolder>() {
 
-    private var talismansList = emptyList<Talismans>()
+    private var talismansList = emptyList<Talisman>()
 
-    var onClickListener: (Talismans) -> Unit = {}
+    var onClickListener: (Talisman) -> Unit = {}
 
     @SuppressLint("NotifyDataSetChanged")
-    fun submitTalismanList(list: List<Talismans>) {
+    fun submitTalismanList(list: List<Talisman>) {
         talismansList = list
         notifyDataSetChanged()
     }
