@@ -4,9 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
-import android.widget.TextView
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.navArgs
@@ -16,10 +13,9 @@ import com.nachopr.eldenringdatabase.R
 import com.nachopr.eldenringdatabase.common.ResourceState
 import com.nachopr.eldenringdatabase.databinding.FragmentWeaponDetailBinding
 import com.nachopr.eldenringdatabase.model.remote.Weapon
-import com.nachopr.eldenringdatabase.view.talismans.TalismanDetailFragmentArgs
 
 
-@Suppress("CAST_NEVER_SUCCEEDS")
+@Suppress("CAST_NEVER_SUCCEEDS", "PreviewAnnotationInFunctionWithParameters")
 class WeaponDetailFragment : Fragment() {
 
     private val binding: FragmentWeaponDetailBinding by lazy {
@@ -29,20 +25,11 @@ class WeaponDetailFragment : Fragment() {
     private val weaponViewModel: WeaponViewModel by activityViewModels()
     private val args: WeaponDetailFragmentArgs by navArgs()
 
-    enum class WeaponAttribute {
-        PHY,
-        MAG,
-        LIGT,
-        HOLY,
-        FIRE,
-        CRIT,
-        BOOST
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
         return binding.root
     }
 
@@ -84,90 +71,63 @@ class WeaponDetailFragment : Fragment() {
             .load(weapon.image)
             .into(binding.ivWeaponDetail)
 
+        binding.tvWeaponCategory.text = weapon.category
+        binding.tvWeaponWeight.text = weapon.weight
+
         weapon.attack.forEach { attribute ->
-
-            val linearLayout = LinearLayout(binding.root.context)
-            linearLayout.layoutParams = LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT
-            )
-            linearLayout.orientation = LinearLayout.HORIZONTAL
-
-
-            val attributeKeyTextView = TextView(binding.root.context)
-            attributeKeyTextView.layoutParams = LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.WRAP_CONTENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT
-            )
-            attributeKeyTextView.setTextAppearance(R.style.WeaponAttributes)
-            attributeKeyTextView.text = attribute.name
-            attributeKeyTextView.setTextColor(ContextCompat.getColor(requireContext(),
-                when(attribute.name as WeaponAttribute){
-                    WeaponAttribute.PHY -> R.color.phy
-                    WeaponAttribute.MAG -> R.color.mag
-                    WeaponAttribute.LIGT -> R.color.ligt
-                    WeaponAttribute.HOLY -> R.color.holy
-                    WeaponAttribute.FIRE -> R.color.fire
-                    WeaponAttribute.CRIT -> R.color.crit
-                    WeaponAttribute.BOOST -> R.color.boost
-                })
-            )
-
-            linearLayout.addView(attributeKeyTextView)
-
-            val attributeValueTextView = TextView(binding.root.context)
-            attributeValueTextView.layoutParams = LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.WRAP_CONTENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT
-            )
-            attributeValueTextView.setTextAppearance(R.style.WeaponAttributes)
-            attributeValueTextView.text = attribute.amount.toString()
-            attributeValueTextView.setTextColor(ContextCompat.getColor(requireContext(), R.color.white))
-
-            binding.llAttackAttributes.addView(attributeKeyTextView)
+            when(attribute.name.uppercase()){
+                "PHY"-> binding.tvAttackAttributePhyValue.text = attribute.amount.toString()
+                "MAG"-> binding.tvAttackAttributeMagValue.text = attribute.amount.toString()
+                "LIGT" -> binding.tvAttackAttributeLigtValue.text = attribute.amount.toString()
+                "HOLY" -> binding.tvAttackAttributeHolyValue.text = attribute.amount.toString()
+                "FIRE" -> binding.tvAttackAttributeFireValue.text = attribute.amount.toString()
+                "CRIT" -> binding.tvAttackAttributeCritValue.text = attribute.amount.toString()
+                else -> {}
+            }
         }
 
         weapon.defence.forEach { attribute ->
+            when(attribute.name.uppercase()){
+                "PHY" ->   binding.tvGuardAttributePhyValue.text = attribute.amount
+                "MAG" ->   binding.tvGuardAttributeMagValue.text = attribute.amount
+                "LIGT" ->  binding.tvGuardAttributeLigtValue.text = attribute.amount
+                "HOLY" ->  binding.tvGuardAttributeHolyValue.text = attribute.amount
+                "FIRE" ->  binding.tvGuardAttributeFireValue.text = attribute.amount
+                "BOOST" -> binding.tvGuardAttributeCritValue.text = attribute.amount
+                else -> {}
+            }
+        }
 
-            val linearLayout = LinearLayout(binding.root.context)
-            linearLayout.layoutParams = LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT
-            )
-            linearLayout.orientation = LinearLayout.HORIZONTAL
+        binding.tvScaleStrValue.text =  " - "
+        binding.tvScaleDexValue.text =  " - "
+        binding.tvScaleIntlValue.text = " - "
+        binding.tvScaleFthValue.text =  " - "
+        binding.tvScaleArcValue.text =  " - "
+        weapon.scalesWith.forEach { scale ->
+            when(scale.name.uppercase()){
+                "STR" ->   binding.tvScaleStrValue.text =  scale.scaling
+                "DEX" ->   binding.tvScaleDexValue.text =  scale.scaling
+                "INT" ->  binding.tvScaleIntlValue.text = scale.scaling
+                "FTH" ->  binding.tvScaleFthValue.text = scale.scaling
+                "ARC" ->  binding.tvScaleArcValue.text = scale.scaling
+                else -> {}
+            }
+        }
 
-
-            val attributeKeyTextView = TextView(binding.root.context)
-            attributeKeyTextView.layoutParams = LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.WRAP_CONTENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT
-            )
-            attributeKeyTextView.setTextAppearance(R.style.WeaponAttributes)
-            attributeKeyTextView.text = attribute.name
-            attributeKeyTextView.setTextColor(ContextCompat.getColor(requireContext(),
-                when(attribute.name as WeaponAttribute){
-                    WeaponAttribute.PHY -> R.color.phy
-                    WeaponAttribute.MAG -> R.color.mag
-                    WeaponAttribute.LIGT -> R.color.ligt
-                    WeaponAttribute.HOLY -> R.color.holy
-                    WeaponAttribute.FIRE -> R.color.fire
-                    WeaponAttribute.CRIT -> R.color.crit
-                    WeaponAttribute.BOOST -> R.color.boost
-                })
-            )
-
-            linearLayout.addView(attributeKeyTextView)
-
-            val attributeValueTextView = TextView(binding.root.context)
-            attributeValueTextView.layoutParams = LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.WRAP_CONTENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT
-            )
-            attributeValueTextView.setTextAppearance(R.style.WeaponAttributes)
-            attributeValueTextView.text = attribute.amount.toString()
-            attributeValueTextView.setTextColor(ContextCompat.getColor(requireContext(), R.color.white))
-
-            binding.llAttackAttributes.addView(attributeKeyTextView)
+        binding.tvRequiresStrValue.text =  " - "
+        binding.tvRequiresDexValue.text =  " - "
+        binding.tvRequiresIntlValue.text = " - "
+        binding.tvRequiresFthValue.text =  " - "
+        binding.tvRequiresArcValue.text =  " - "
+        weapon.requiredAttributes.forEach { requiredAttribute ->
+            when(requiredAttribute.name.uppercase()){
+                "STR" ->    binding.tvRequiresStrValue.text =  requiredAttribute.amount
+                "DEX" ->    binding.tvRequiresDexValue.text =  requiredAttribute.amount
+                "INT" ->   binding.tvRequiresIntlValue.text =  requiredAttribute.amount
+                "FTH" ->   binding.tvRequiresFthValue.text  =  requiredAttribute.amount
+                "ARC" ->   binding.tvRequiresArcValue.text  =  requiredAttribute.amount
+                else -> {}
+            }
         }
     }
 
